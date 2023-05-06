@@ -1,0 +1,25 @@
+{
+  "src": "tests/",
+  "skipJsErrors": true,
+  "concurrency": 1,
+  "selectorTimeout": 4000,
+  "assertionTimeout": 4000,
+  "pageLoadTimeout": 4000,
+  "screenshots": {
+    "path": "output/screenshots/",
+    "takeOnFails": true,
+    "pathPattern": "${DATE}/${TIME}/${TEST_INDEX}/${FILE_INDEX}-${USERAGENT}.png"
+  },
+  "reporter": [
+    {
+      "name": "spec"
+    },
+    {
+      "name": "html",
+      "output": "output/reports/html/report.html"
+    },
+    {
+      "name": "allure"
+    }
+  ]
+}

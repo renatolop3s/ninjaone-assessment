@@ -1,0 +1,28 @@
+{
+  "name": "devices-testcafe-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test:chrome": "testcafe chrome",
+    "test:firefox": "testcafe firefox",
+    "test:safari": "testcafe safari",
+    "test:multi": "testcafe chrome,firefox",
+    "test:chrome:headless": "testcafe 'chrome:headless'",
+    "test:chrome:parallel": "testcafe -c 5 'chrome:headless'",
+    "test:report:open": "npx allure generate output/reports/allure/allure-results --clean -o output/reports/allure/allure-report && npx allure open output/reports/allure/allure-report"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.22.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-testcafe": "^0.2.1",
+    "testcafe": "^2.5.1-rc.1",
+    "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-html": "^1.4.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
